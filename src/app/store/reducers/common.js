@@ -1,11 +1,15 @@
 import { fetchDrivers, searchText }  from "../actions"
 
+let json_data = require("../../utils/data.json");
+
 const initialAssyncState = {
     loaded: false,
     loading: false,
     error: false,
     errorMessage: null,
-    data: []
+    data: [
+        ...json_data
+    ]
 }
 
 export const driversReducer = (state=initialAssyncState, action) => {

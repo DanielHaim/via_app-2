@@ -10,6 +10,7 @@ const size = {
     laptop:   '1024px',
     laptopM:  '1200px',
     laptopL:  '1440px',
+    laptopXL:  '1500px',
     desktop:  '2560px',
 }
 
@@ -24,6 +25,7 @@ const theme = {
     laptop:   `(min-width: ${size.laptop})`,
     laptopM:  `(min-width: ${size.laptopM})`,
     laptopL:  `(min-width: ${size.laptopL})`,
+    laptopXL: `(min-width: ${size.laptopXL})`,
     desktop:  `(min-width: ${size.desktop})`,
     desktopL: `(min-width: ${size.desktop})`
   }
