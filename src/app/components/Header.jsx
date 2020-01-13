@@ -13,13 +13,13 @@ const TextPart = styled.div`
     flex-wrap: nowrap;
     white-space: nowrap;
     padding-right: 20px;
-    font-size: 1.6rem;
     max-width: 100%;
     transition: max-width  ${transitionTime}s ease-in-out, 
                 opacity    ${transitionTime}s ease-in-out, 
                 padding    ${transitionTime}s ease-in-out;
     ${({theme: {breakpoints}}) =>`
-        @media ${breakpoints.xs} { padding-left: 40px;}
+        @media ${breakpoints.xs} { padding-left: 10px; font-size: 1.2rem; }
+        @media ${breakpoints.mobileS} { padding-left: 40px; font-size: 1.6rem;}
         @media ${breakpoints.tabletS} { padding-left: 85px;}
     `}
 ` 
@@ -27,12 +27,15 @@ const TextPart = styled.div`
 const SearchPart = styled.div`
     display: flex;
     align-items: center;
-    padding: 0 35px;
     width: 100%;
     justify-content: flex-end;
+    ${({theme: {breakpoints}}) =>`
+        @media ${breakpoints.xs} { padding: 0 5px; }
+        @media ${breakpoints.mobileS} { padding: 0 35px;}
+    `}
     > input {
         ${({theme: {breakpoints}}) =>`
-            @media ${breakpoints.xs} { max-width: 20px; &:focus{ max-width: 100%; } } 
+            @media ${breakpoints.xs} { max-width: 20px; &:focus{ max-width: 100%; }; }
             @media ${breakpoints.tabletS} { max-width: 400px; &:focus{ max-width: 400px; } }
         `}
     }

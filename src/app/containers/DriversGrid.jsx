@@ -18,15 +18,18 @@ const ContainerGrid = styled.div`
     margin-left: -${gutter}px;
     margin-bottom: -${gutter}px;
     ${({theme: {breakpoints}}) =>`
-        @media ${breakpoints.xs} { margin: 0 12%;}
+        @media ${breakpoints.xs} { margin: 0 0%;}
+        @media ${breakpoints.mobileL} { margin: 0 3%;}
+        @media ${breakpoints.tabletS} { margin: 0 12%; }
         @media ${breakpoints.laptopXL} { margin: 0 24%; }
+        @media ${breakpoints.desktop} { margin: 0 30%; }
     `}
 `
 
 const Cell = styled.div`
     min-width: ${driverCardWith}px;
     max-width: ${1.5*driverCardWith}px;
-    flex: 1 0 calc(${100/numCardPerRow}% - ${gutter + 2*paddingCard}px);
+    flex: 1 1 calc(${100/numCardPerRow}% - ${gutter + 2*paddingCard}px);
     margin-bottom: ${gutter}px;
     margin-left: ${gutter}px;
     padding: 16px;
